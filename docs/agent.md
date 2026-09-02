@@ -620,7 +620,7 @@ async def main():
     except RunCancelled as exc:
         messages = exc.all_messages()
         print(f'Cancelled after {len(messages)} messages')
-        #> Cancelled after 2 messages
+        #> Cancelled after 3 messages
         await agent.run(message_history=messages)  # (2)!
 ```
 
@@ -676,7 +676,7 @@ async def main():
         assert cancelled is not None
         messages = cancelled.all_messages()
         print(f'Cancelled after {len(messages)} messages')
-        #> Cancelled after 2 messages
+        #> Cancelled after 3 messages
         await agent.run(message_history=messages)  # (3)!
 ```
 
